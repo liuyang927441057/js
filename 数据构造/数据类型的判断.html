@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //如何区分对象和数组
+
+        //1：判断一个数据是不是数组
+
+        var arr = [1]
+        var obj ={}
+
+        // Array.isArray( ) 判断一个数据是否是数组：参数为JS 数据：赋值为JS 数据的变量
+        var res = Array.isArray(obj)
+        console.log(res)
+
+
+        //如何区分对象和数组
+        console.log(arr.constructor===Array)
+        console.log(obj.constructor===Object)
+    </script>
+</body>
+</html>
