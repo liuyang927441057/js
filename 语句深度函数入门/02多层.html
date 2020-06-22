@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如何统计循环体中的执行次数
+        var count = 0;
+        var num =  0;
+        for(var i=0; i<9; i++){
+            // 如何统计var里面的循环执行多少次
+            console.log('i',i)
+            num++
+            for(var j=0; j<9; j++){
+
+                //如何统计 里面for 执行的次数
+                ++count;
+                console.log('j==============',j)
+            }
+        }
+        console.log(count)
+        console.log(num)
+
+
+
+        // 上面的逻辑处理的数据结构----->多维数组/二维数组
+        // 取出一维数组下的数据
+        var arr = [
+        ['aa','222'],
+        ['ba','222'],
+        ['ca','222'],
+        ['da','222'],
+        ['ea','222'],
+        ['ea','222','ddd'],
+        ['ea','222','ddd'],
+
+        ]
+
+        // 动态获取多维数组数据
+        // for(var i =0 ; i<arr.length;i++){
+        //     console.log(arr[i])
+        //     for(var j=0 ; j<arr[i].length;j++){
+        //         console.log(arr[i][j])
+        //     }
+        // }
+
+        //需求：打印 数组长度为3的所有数据
+        for(var i =0 ; i<arr.length;i++){
+            console.log(arr[i]);
+            if(arr[i].length == 3){
+               for(var j=0 ; j<arr[i].length;j++){
+                console.log(arr[i][j]);
+                }
+            }
+        }
+        //1:循环执行多少次
+        //2结果多少个： 只要比执行次数少的，一定
+
+
+
+    </script>
+</body>
+</html>
