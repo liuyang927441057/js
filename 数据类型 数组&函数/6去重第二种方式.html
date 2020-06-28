@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var arr = [1,2,,12,2,3,3,3,3];
+        // // 从头用 第一项 与后面的每一项进行比较
+        // for (var i = 0;i<arr.length;i++){
+        //     console.log(arr[i]);
+        //     for (var j =i+1; j<arr,length; j++){
+        //         if(arr[i] === arr[j]){
+        //             // 后面的相等于 前面的项 删除其中一项 注意：arr length 变小了
+        //             arr.splice(j,1)
+        //             j--  // 删除元素后  for 循环回退一步 如果没有j-- 会漏掉数据
+
+        //         }
+        //     }
+        // }
+
+
+        var  res = []
+        for(var i=0; i<arr.length;i++){
+            if(res.indexOf[arr[i]]==-1){
+                res.push(arr[i])
+            }
+        }
+        console.log(res)
+
+
+
+
+
+    </script>
+</body>
+</html>
