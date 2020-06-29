@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 100;  
+  
+  function testResult(){   
+   
+        var b = 2 * a;    
+  
+        var a = 200;   
+   
+        var c = a / 2;  
+    
+        alert(b);  
+    
+        alert(c);  
+    
+  }    
+  
+  testResult()
+
+  // GO{}
+  // GO{
+  //    a :undefined
+  //    testResult: function
+  //  }
+
+  // AO{}
+  // AO{
+  //    b:undefined ----> 2*a---->2*undefined---->NaN
+  //    a:undefined ----> 200
+  //    c:undefined ----> a/2---> 200/2 --->100
+  //}
+  //形参实参统一
+  //方法体中函数声明提升
+  //解析执行
+  // AO{}
+  // AO{
+  //    alert(b):NaN
+  // }
+  //AO{}
+  // AO{
+  //    alert(c):100
+  // }
+  
+
+
+
+  
+
+
+    </script>
+</body>
+</html>
