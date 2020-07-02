@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 变量或属性key 赋值是 js 基本类型数据 存的是数据
+        // 变量或属性key 赋值为引用类型数据   存的是【指针】
+        // var obj = {
+        //     name:'yanqi',
+        //     age:18
+        // }
+        // var res = {}
+        // // xxx.xx.xx 点左边的赋值都是对象 ，xx 本身类型是【字符串】
+        // for(var x in obj){
+        //     res[x] = obj[x]
+        // }
+        // console.log(res)
+        // function  copyObject(obj){
+        //     // 错误优先原则
+        //     if(arguments.length==0){
+        //         throw new Error('arguement.length can not zoro');
+        //     }
+        //     if(arguments.length >1){
+        //         throw new Error('arguements.length can is not gt 1')
+        //     }
+        //     if(obj.constructor !==Object){
+        //         throw new Error('type param must be object')
+        //     }
+        //     var res = {} ;
+        //     for (var x in obj) {
+        //         res[x] = obj[x];
+        //     }
+        // }
+        // copyObject({
+        //     name : '周超',
+        //     age:21,
+        // });
+
+        // function copyArray(arr){
+        //     if(arguments.length==0){
+        //         throw new Error('argument.length can not zoro');
+        //     }
+        //     if(arguments.length >1){
+        //         throw new Error('arguments.length can is not gt 1')
+        //     }
+        //     if(!Array.isArray(arr)){
+        //         throw new Error('type param must be Array')
+        //     }
+        //     var res = []
+        //     for(var i = 0,len = arr.length;i<len;i++){
+        //         res.push(arr[i])
+        //     }
+        //     return res 
+
+        // }
+        // var  res = copyArray [1,2,3,4,'1'];
+        // console.log(res)
+        // copy 拷贝拷贝数组或对象 并返回结果
+        function copy(param){
+            if(arguments.length==0){
+                throw new Error('argument.length can not zoro');
+            }
+            if(arguments.length >1){
+                throw new Error('arguments.length can not gt 1');
+            }
+            if(!(param instanceof Object)){
+                throw new Error('type param must be array or object');
+            }
+            // 如果参数为数组
+            if(Array.isArray(param)){
+                var res = [];
+                for(var i = 0 , len = param.length; i<len; i++){
+                    res.push(param[i]);
+                }
+            }
+            return res;
+        }
+        if(param.constructor === Object){
+            var res = {};
+            for(var x in param){
+                res[x] = param[x];
+            }
+            return res1;
+        }
+        
+        var res = copy({name:'feifei'});
+        var res1 = copy([1,1,1,1]);
+        console.log(res);
+        console.log(res1);
+
+    </script>
+</body>
+</html>

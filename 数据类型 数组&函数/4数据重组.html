@@ -80,8 +80,26 @@
               console.log(item[x])
           }
       })
-
       
+      var fen = data.filetetr(function(item){
+            return item.type_two =='咖啡粉'
+        })
+        console.log(fen)
+
+        var fei = data.filetetr(function(item){
+            return item.type_two =='手冲咖啡'
+        })
+        console.log(fei)
+
+        var res = []
+        
+        for(var i=0 ; i<data.length;i++){
+
+
+        }
+        console.log(res)
+
+    
 
 
 
